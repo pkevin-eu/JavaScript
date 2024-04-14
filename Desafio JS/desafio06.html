@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+    <style>
+        body {
+            font-size: 1.25rem;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            background-image: linear-gradient(to top, rgb(0, 0, 0), rgb(1, 9, 251));
+            background-attachment: fixed;
+            text-align: center;
+            color: white;
+        }
+        .temp {
+            width: 170px;
+            height: 110px;
+            background-image: linear-gradient(to right, rgb(255, 0, 238), rgba(166, 0, 255, 0.844));
+            font-weight: bold;
+            font-size: 1.25rem;
+            text-align: center;
+            border-top-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Conversor de Temperaturas...</h1>
+    </header>
+    <section>
+        <button onclick="convert()" class="temp">Converter Temperatura</button>
+        <div class="resp">
+            As conversões de temperaturas aparecerão logo abaxio, basta clicar para iniciar a conversão...
+        </div>
+    </section>
+    <script>
+        function convert (){
+            let temperatura = Number(window.prompt('Digite uma temperatura em C° (celsius)'))
+            let resp = document.querySelector('div.resp')
+
+            resp.innerHTML = ''
+            resp.innerHTML += `<p>A temperatura de ${temperatura} °C, corresponde a...</p>`
+            resp.innerHTML += `<p>${temperatura + 273} K (Kelvin)</p>`
+            resp.innerHTML += `<p>${(9*temperatura + 160)/5} °F (Fahrenheit)</p>`
+        }
+    </script>
+</body>
+</html>

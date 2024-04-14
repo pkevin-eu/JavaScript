@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meu exercico</title>
+    <style>
+        body {
+            background-color: plum;
+            font: normal 1.2em arial;
+        }
+        div#msg{
+            background-color: grey;
+            color:white;
+            width: 200px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        input.somar {
+            width: 100px;
+            font: bold 1.1em arial;
+        }
+        input.diferença {
+            width: 100px;
+            font: bold 1.1em arial;
+        }
+        input.multiplicação {
+            width: 100px;
+            font: bold 1.1em arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Praticando interação:</h1>
+    <div id="msg" >
+        clique em mim
+    </div>
+    <input type="number" name="txtn1" id="txtn1" class="somar"> + 
+    <input type="number" name="txtn2" id="txtn2" class="somar">
+    <input type="button" value="somar" onclick="somar()" class="somar">
+    <div id="res">
+        Resultado...
+    </div> <br>
+    <input type="number" name="sxsn1" id="sxsn1" class="diferença"> - 
+    <input type="number" name="sxsn2" id="sxsn2" class="diferença">
+    <input type="button" value="Subtrair" onclick="diferença()" class="diferença">
+    <div id="ed">
+        Resultado...
+    </div>
+    <br>
+    <input type="number" name="mxmt1" id="mxmt1" class="multiplicação"> *
+    <input type="number" name="mxmt1" id="mxmt2" class="multiplicação">
+    <input type="button" value="multiplicação" onclick="multiplicação()" class="multiplicação">
+    <div id="xd">
+        Resultado...
+    </div>
+
+    <script>
+        var d = window.document.getElementById('msg')
+
+        d.addEventListener('click', clicar)
+        d.addEventListener('mouseenter', entrar)
+        d.addEventListener('mouseout', sair)
+
+
+        function clicar() {
+            d.innerText = 'Você clicou!'
+            d.style.background = 'red'
+        }
+
+        function entrar() {
+            d.innerText = 'entrou..'
+            d.style.background = 'yellowgreen'
+        }
+
+        function sair() {
+            d.innerText = 'saiu...'
+            d.style.background = 'blue'
+        }
+
+        function somar() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var r = window.document.getElementById('res')
+            var s = n1 + n2
+            r.innerText = (`A soma entre ${n1} e ${n2} é igual a : ${s}`)
+            r.style.color = 'white'
+
+
+        } 
+        
+        function diferença() {
+          var sn1 = window.document.getElementById('sxsn1')
+          var sn2 = window.document.getElementById('sxsn2')
+          var n1 = Number(sn1.value)
+          var n2 = Number(sn2.value)
+          var e = window.document.getElementById('ed')
+          var s = n1 - n2
+          e.innerText = (`A diferença entre ${n1} e ${n2} é igual a: ${s}`)
+          e.style.color = 'white'
+        }
+        function multiplicação() {
+            var mt1 = window.document.getElementById('mxmt1')
+            var mt2 = window.document.getElementById('mxmt2')
+            var n1 = Number(mt1.value)
+            var n2 = Number(mt2.value)
+            var f = window.document.getElementById('xd')
+            var m = (n1 * n2)
+            f.innerText = (`A multiplicação entre ${n1} e ${n2} é igual a : ${m}`)
+            f.style.color = 'white'
+        }
+    </script>
+</body>
+</html>

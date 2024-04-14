@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>praticando</title>
+</head>
+<body>
+    <h1>Pratica: </h1>
+    Gênero: <input type="text" name="gnt" id="gnt">
+    <input type="button" value="verificar" onclick=" identificar()">
+    <div id="sex">
+        Esperando a respota do usuário... e, por favor, responda com masculino ou feminino.
+    </div>
+    <script>
+        function identificar() {
+            var gnt = window.document.getElementById('gnt')
+            var resposta = window.document.getElementById('sex')
+
+            var gênero = (gnt.value)
+
+            if (gênero == 'masculino') {
+                resposta.innerHTML = `<p>Entendi, <strong>${gênero}</strong> né... Então você é "ele"</p>`
+            } else {
+                resposta.innerHTML = `<p>Entendi, <strong>${gênero}</strong> né... Então você é "ela"`
+            }
+        }
+    </script>
+</body>
+</html>

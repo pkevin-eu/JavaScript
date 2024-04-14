@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font-weight: normal;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(16, 133, 16);
+            color: white;
+            width: 200px;
+            height: 150px;
+            text-align: center;
+            line-height: 150px;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        div#b {
+            font-weight: normal;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: purple;
+            color:white;
+            width: 200px;
+            height:150px;
+            line-height: 150px;
+            text-align: center;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="cilcar()" onmouseenter="entrar()" onmouseout="sair()">
+        Interaja (estou dentro do html)
+    </div>
+    <div id="b">
+        Interaja (estou dentro do script)
+    </div>
+    <script>
+        var a = window.document.getElementById('area')
+        var b = window.document.getElementById('b')
+
+        b.addEventListener('click', clicar)
+        b.addEventListener('mouseenter', entrar)
+        b.addEventListener('mouseout', sair)
+
+        function cilcar() {
+            a.innerText = 'você clicou'
+            a.style.background = 'red'
+
+            b.innerText = 'Clicou!'
+            b.style.background = 'plum'
+        } 
+        // tenho que colocar ação e o nome para dps colocá-la na ação da function
+        function entrar() {
+            a.innerText = 'entrou'
+            a.style.background = 'blue'
+
+            b.innerText = 'entrou'
+            b.style.background = 'yellow'
+        }
+        function sair() {
+            a.innerText = 'saiu'
+            a.style.background = 'green'
+
+            b.innerText = 'saiu'
+            b.style.background = 'orange'
+        }
+    </script>
+</body>
+</html>

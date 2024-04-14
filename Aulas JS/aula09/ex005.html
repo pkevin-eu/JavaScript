@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(144, 98, 219);
+            color: white;
+            font: normal 20pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM:</h1>
+    <p>Aprendendo a utilizar o <strong>DOM</strong> em JavaScript:</p>
+    <p>Aqui vai o resultado</p>
+    <div id="msg">
+        Clique em mim
+    </div>
+    <div name="nsg">
+        Clique em mim também
+    </div>
+    <div class="bsg">
+        Eu também quero ser clicado
+    </div>
+    <div class="hsg">
+        Última div
+    </div>
+    <script>
+        var corpo = window.document.body
+        var p1 = document.getElementsByTagName('p')[0]
+        window.document.write(`Está escrito assim: ${p1.innerHTML}`)
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        
+        d.innerText = 'Estou aguardando...'
+        window.document.getElementById('msg').innerText = 'Olá, mundo!'
+        
+        var d = window.document.getElementsByName('nsg')[0]
+        d.innerText = 'Olá!'
+
+        //quando for elemento no plural é obrigado a colocar o [], senão o código javascript não vai funcionar
+
+        var c = document.getElementsByClassName('bsg')[0]
+        c.innerText = 'Tudo bem'
+        var f = window.document.querySelector('div.hsg')
+        f.style.background = 'blue'
+        
+        // por selector dentro do () devemos escrever em notação CSS
+    </script>
+</body>
+</html>

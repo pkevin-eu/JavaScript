@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antes/Depois</title>
+    <style>
+        body {
+            background-color: rgba(128, 128, 128, 0.756);
+            font: bold, 1.25em, Arial
+        }
+        .botao {
+            width: 200px;
+            height: 100px;
+            background-color: gray;
+            color:white;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>  
+    <header>
+        <h1>Antes e Depois</h1>
+    </header>
+    <section>
+        <button onclick="AnterioreSucessor()" class="botao">Anterior e Sucessor</button>
+    </section>
+    <section>
+        <h1>Dobro e Metade</h1>
+        <button onclick="DobroeMetade()" class="botao">Dobro e Metade</button>
+    </section>
+    <script>
+        function AnterioreSucessor(){
+            let n = prompt('Digite um número inteiro qualquer')
+            alert(`Antes do ${Number(n)}, temos ${n-1}. Depois de ${n}, temos ${Number(n)+1}`)
+        }
+
+        function DobroeMetade(){
+            let num = prompt('Digite um número inteiro qualquer')
+            alert(`O dobro de ${num} é: ${num*2}, a metade de ${num} é: ${num/2}`)
+        }
+    </script>
+</body>
+</html>

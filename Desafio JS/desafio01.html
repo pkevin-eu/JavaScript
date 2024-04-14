@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagens</title>
+    <style>
+        body {
+            background-color: rgba(128, 128, 128, 0.756);
+            font-size: 1.25em;
+        }
+        .botao {
+            background-color: gray;
+            width: 150px;
+            height: 100px;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Desafio das mensagens javaScript</h1>
+    </header>
+    <section>
+        <button  class="botao" onclick="clicar()">Botão 1</button>
+        <button class="botao" onclick="clicar2()">Botão 2</button>
+        <button class="botao" onclick="clicar3()">Botão 3</button>
+    </section>
+    <script>
+        function clicar(){
+            window.alert('Você clicou no primeiro botão!')
+        }
+        function clicar2(){
+            alert('Você clicou no segundo botão!')
+        }
+
+        function clicar3(){
+            alert('Você clicou no terceiro botão!')
+        }
+    </script>
+</body>
+</html>

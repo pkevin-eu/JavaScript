@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+body {
+    background-image: linear-gradient(to top, rgba(18, 104, 18, 0.851), rgb(57, 57, 57));
+    background-attachment: fixed;
+
+    font: normal 1.5em arial
+}
+
+header {
+    color:aliceblue;
+    text-align: center;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+}
+
+select#clista {
+    width: 180px;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, rgba(131, 123, 123, 0.822), transparent);
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}

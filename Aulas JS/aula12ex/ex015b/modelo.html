@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modelo de exercício</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>
+           Verificador de idade:
+        </h1>
+    </header>
+    <section>
+        <div>
+            <input type="number" name="txtano" id="txtano" min="0">
+            <p>
+            Sexo: <input type="radio" name="radsex" id="mas" checked>
+
+                  <label for="mas">Masculino</label>
+
+                  <input type="radio" name="radsex" id="fem">
+                  
+                  <label for="fem">feminino</label>
+           </p>
+           <p>
+            <input type="button" value="verificar" onclick="verifique()">
+           </p>
+        </div>
+
+        <div id="res">
+            Olá! A mensagem vai aparecer aqui
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Criado por Paulo kevin</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

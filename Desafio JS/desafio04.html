@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula troco</title>
+    <style>
+        body {
+            background-image:linear-gradient(to top, rgba(128, 128, 128, 0.663), rgba(128, 128, 128, 0.896));
+            background-attachment: fixed;
+            font: bold, 1.25em, arial            
+        }
+
+        #butao {
+            font-weight: bold;
+            width: 175px;
+            height: 100px;
+            font-size: 1em;
+            background-color: gray;
+            color: white;
+            border-radius: 15px;
+        }
+        p, h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Calculando o troco:</h1>
+    </header>
+    <section>
+        <p><button id="butao" onclick="clicar()">Comprar produto</button></p>
+    </section>
+    <script>
+        function clicar(){
+            let produto = prompt('Qual o nome do produto você quer comprar??')
+            let preço = prompt(`Quanto custa o ${produto}??`)
+            let valorpago = prompt(`Quanto você pagou em dinheiro pelo ${produto}??`)
+            alert(`Você comprou ${produto} que custou ${preço} reais, pagou ${valorpago} em dinheiro e seu troco é de: ${Number(valorpago) - Number(preço)} reais `)
+
+        }
+    </script>
+</body>
+</html>

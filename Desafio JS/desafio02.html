@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boas vindas!</title>
+    <style>
+        body {
+            background-color: rgba(128, 128, 128, 0.701);
+            font-size: 1.25em;
+        }
+        button {
+            width: 200px;
+            height: 100px;
+            background-color: gray;
+            font: bold 1em Arial;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Boas vindas!</h1>
+    </header>
+    <section>
+         <button onclick="clicar()">Inicie o desafio...</button>
+    </section>
+    <script>       
+        function clicar(){
+            let nome = prompt('Qual o seu nome?')
+            let idade = prompt(`Olá, ${nome}. Qual a sua idade?`)
+            alert(`Olá, acabei de conhecer ${nome}, prazer! de apenas ${idade} anos, bem novo em...`)
+        }
+    </script>
+</body>
+</html>

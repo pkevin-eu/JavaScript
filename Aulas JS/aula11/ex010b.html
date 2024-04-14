@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+</head>
+<body>
+    <h1>Desafio01</h1>
+     Qual país você nasceu? <input type="text" name="txp" id="txp">
+    <input type="button" value="verificar" onclick="clicar()">
+    <div id="res">
+        Esperando a resposta...
+    </div>
+    <script>
+        function clicar() {
+            var p = window.document.getElementById('txp')
+            var r = window.document.getElementById('res')
+
+            pais = (txp.value)
+            if (pais == 'Brasil') {
+                r.innerHTML += `<p>Então você é um Brasileiro</p>`
+            } else {
+                r.innerHTML += `<p>Então você é um Estrangeiro</p>`
+            }
+        }       
+    </script>
+</body>
+</html>

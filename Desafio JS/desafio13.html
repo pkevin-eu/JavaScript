@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situação do aluno</title>
+    <style>
+        body {
+            background-image: linear-gradient(to bottom, rgb(73, 73, 75), rgb(160, 160, 160));
+            background-attachment: fixed;
+            font-size: 1.4rem;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            color:white;
+        }
+        .botao {
+            margin-bottom:20px;
+            width: 180px;
+            height:100px;
+            font-size: 1rem;
+            font-weight: bold;
+            background-image: linear-gradient(to right, rgb(234, 111, 23), rgb(219, 234, 15));
+            border-radius: 10px;
+            color:white;
+            
+        }
+        .botao:hover{
+            text-decoration: underline;
+            color:black;
+        }
+        mark#apr {
+            background-color: rgb(26, 255, 0);
+            color:rgb(20, 97, 1);
+            padding: 3px;
+            border-radius: 10px;
+        }
+        mark#rep {
+            background-color: rgb(255, 60, 0);
+            color:rgb(255, 0, 0);
+            padding: 3px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Situação do aluno</h1>
+    </header>
+    <section>
+        <button class="botao" onclick="MediaAluno()">Entrar com as notas</button>
+        <div id="res">
+            Clique acima no botão para informar as notas do aluno.
+        </div>
+    </section>
+    <script src="script13.js"></script>
+</body>
+</html>

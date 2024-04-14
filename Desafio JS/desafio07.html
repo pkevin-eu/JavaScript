@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de moeda</title>
+    <style>
+        body {
+            background-image: linear-gradient(to bottom, rgb(66, 66, 231), rgb(161, 65, 161));
+            background-attachment: fixed;
+            font-size: 1.4rem;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        .botao {
+            background-image: linear-gradient(to right, rgb(213, 42, 42), rgba(0, 0, 0, 0.693));
+            border-radius: 10px;
+            margin: auto;
+            width: 150px;
+            height: 100px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Conversor de R$ para  US$:</h1>
+    </header>
+    <section>
+        <button class="botao" onclick="converter()">Converter moeda</button> <br>
+        <div id="res">
+            Clique no botão para iniciar o programa.
+        </div>
+    </section>
+    <script>
+       let dolar = Number(prompt('Quanto que está a cotação do Dólar hoje?'))
+       function converter (){
+        let real = Number(prompt('Quantos reais você tem na carteira?'))
+        let res = document.querySelector('div#res')
+
+        res.innerHTML = ''
+        res.innerHTML += `Você, neste exato momento, pode comprar, com seus ${real} reais, até ${real/dolar} dolares.`
+        
+       }
+    </script>
+</body>
+</html>
