@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste 5</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: bisque;
+        }
+        input {
+            width:120px;
+            height: 90px;
+            border-radius: 10px 0px;
+        }
+        div {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com números</h1>
+    <input type="button" value="Clique em mim!" onclick="numero()">
+    <div id="resultado">
+        O resultado vem aqui...
+    </div>
+</body>
+<script>
+    alert('Seja bem vindo ao meu script!')
+    function numero (){
+        let num = Number(prompt('Digite um número'))
+        let r = document.querySelector('div#resultado')
+        r.innerHTML = `O dobro de ${num} é ${num*2} e sua metade é ${num/2}.`
+    }
+</script>
+</html>

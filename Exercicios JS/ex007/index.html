@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste 7</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        input {
+            width: 150px;
+            height: 100px;
+            border-radius: 0px 15px;
+        }
+        div {
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Média do aluno:</h1>
+    <input type="button" value="Calcular média" onclick="media()">
+    <div id="resultado">
+        O resultado vai aparecer aqui... 
+    </div>
+</body>
+<script>
+    function media(){
+        let r = document.querySelector('div#resultado')
+        let nome = prompt('Qual o nome do aluno?')
+        let nota1 = Number(prompt(`Qual a primeira nota do ${nome}`))
+        let nota2 = Number(prompt(`Qual a segunda nota do ${nome}`))
+        let media = (nota1 + nota2)/2
+        resultado.innerHTML = ''
+        resultado.innerHTML += `<p>Calculando a média final de ${nome}</p>`
+        resultado.innerHTML += `<p>As notas que ${nome} foram <mark>${nota1}</mark> e <mark>${nota2}</mark></p>`
+        resultado.innerHTML += `A média final será ${media}` 
+    }
+    
+</script>
+</html>
