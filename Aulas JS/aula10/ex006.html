@@ -22,7 +22,7 @@
             font-family: Arial, Helvetica, sans-serif;
             background-color: purple;
             color:white;
-            width: 200px;
+            width: 300px;
             height:150px;
             line-height: 150px;
             text-align: center;
@@ -31,7 +31,7 @@
     </style>
 </head>
 <body>
-    <div id="area" onclick="cilcar()" onmouseenter="entrar()" onmouseout="sair()">
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
         Interaja (estou dentro do html)
     </div>
     <div id="b">
@@ -45,7 +45,7 @@
         b.addEventListener('mouseenter', entrar)
         b.addEventListener('mouseout', sair)
 
-        function cilcar() {
+        function clicar() {
             a.innerText = 'você clicou'
             a.style.background = 'red'
 
